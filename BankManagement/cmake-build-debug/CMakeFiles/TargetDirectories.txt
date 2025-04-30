@@ -1,0 +1,3 @@
+C:/Users/DELL/CLionProjects/BankManagement/cmake-build-debug/CMakeFiles/BankManagement.dir
+C:/Users/DELL/CLionProjects/BankManagement/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/DELL/CLionProjects/BankManagement/cmake-build-debug/CMakeFiles/rebuild_cache.dir

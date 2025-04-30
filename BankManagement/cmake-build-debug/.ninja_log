@@ -1,0 +1,10 @@
+# ninja log v6
+1428	5310	7672763871228336	CMakeFiles/BankManagement.dir/main.cpp.obj	bd6e3ee2fed4089
+1604	2028	7677086560762148	BankManagement.exe	6e5b50c82c6fb426
+36	1905	7676983844796404	CMakeFiles/BankManagement.dir/Test1.cpp.obj	c922e7e1acd61b13
+134	1642	7677237789729966	build.ninja	f3daad720eae4bc2
+51	1603	7677086545228679	CMakeFiles/BankManagement.dir/ProductsManagement.cpp.obj	4746bd58612bc4e5
+125	1449	7677243317553037	CMakeFiles/BankManagement.dir/ProductsManagement.cpp.obj	4746bd58612bc4e5
+1450	1917	7677243330799440	BankManagement.exe	6e5b50c82c6fb426
+15	1477	7677247232812465	CMakeFiles/BankManagement.dir/ProductsManagement.cpp.obj	4746bd58612bc4e5
+1479	1789	7677247247451725	BankManagement.exe	6e5b50c82c6fb426

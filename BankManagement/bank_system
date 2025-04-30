@@ -1,0 +1,99 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+class BankAccount {
+private:
+    string name;
+    int accountNumber;
+    double balance;
+
+public:
+    void createAccount() {
+        cout << "Enter account holder's name: ";
+        cin.ignore();  // Flush newline
+        getline(cin, name);
+
+        cout << "Enter account number: ";
+        cin >> accountNumber;
+
+        cout << "Enter initial deposit amount: ";
+        cin >> balance;
+
+        cout << "\n✅ Account created successfully!\n";
+    }
+
+    void displayAccount() const {
+        cout << "\n📄 Account Details:\n";
+        cout << "Name: " << name << endl;
+        cout << "Account Number: " << accountNumber << endl;
+        cout << "Balance: $" << balance << endl;
+    }
+
+    void saveToFile() const {
+        ofstream file("account.txt");
+        if (file.is_open()) {
+            file << name << endl;
+            file << accountNumber << endl;
+            file << balance << endl;
+            file.close();
+            cout << "\n💾 Data saved to file.\n";
+        } else {
+            cout << "❌ Error saving to file.\n";
+        }
+    }
+
+    void loadFromFile() {
+        ifstream file("account.txt");
+        if (file.is_open()) {
+            getline(file, name);
+            file >> accountNumber;
+            file >> balance;
+            file.close();
+            cout << "\n📂 Data loaded from file.\n";
+        } else {
+            cout << "❌ No saved data found.\n";
+        }
+    }
+};
+
+// ---------- Main Menu ----------
+int main() {
+    BankAccount acc;
+    int choice;
+
+    do {
+        cout << "\n🏦 Bank Management System";
+        cout << "\n1. Create Account";
+        cout << "\n2. Display Account";
+        cout << "\n3. Save to File";
+        cout << "\n4. Load from File";
+        cout << "\n5. Exit";
+        cout << "\nEnter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                acc.createAccount();
+                break;
+            case 2:
+                acc.displayAccount();
+                break;
+            case 3:
+                acc.saveToFile();
+                break;
+            case 4:
+                acc.loadFromFile();
+                break;
+            case 5:
+                cout << "👋 Exiting... Goodbye!\n";
+                break;
+            default:
+                cout << "❌ Invalid choice. Try again.\n";
+        }
+    } while (choice != 5);
+
+    return 0;
+}
